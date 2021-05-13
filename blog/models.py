@@ -12,6 +12,9 @@ class Category(models.Model):
 
     title = models.CharField(verbose_name='Title', max_length=200, blank=False, null=False)
 
+    def __str__(self):
+        return self.title
+
 
 class Post(models.Model):
     class Meta:

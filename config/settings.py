@@ -55,7 +55,7 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['/Users/sias/projects/pasv/backend3/blog_project/pasv-blog/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
