@@ -8,7 +8,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 class PostAdmin(admin.ModelAdmin):
-    list_display = ['title', 'time_created', 'category']
+    list_display = ['title', 'id', 'time_created', 'category']
     list_filter = ['time_created']
 
 

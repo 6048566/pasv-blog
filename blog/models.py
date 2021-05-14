@@ -27,4 +27,5 @@ class Post(models.Model):
     content = models.TextField(verbose_name='Content', blank=False, null=False)
     time_created = models.DateTimeField(verbose_name='Created time', auto_now_add=True)
     category = models.ForeignKey(Category, verbose_name='Category', on_delete=models.CASCADE, blank=True, null=True)
+    photo = models.ImageField(upload_to='images', null=True, blank=True)
 
