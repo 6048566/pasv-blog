@@ -15,11 +15,16 @@ def my_first_page(request):
 
 
 def main_feed(request):
+    max_posts_on_page = 10
+    page = int(request.GET.get('page', 1))
 
-    posts = Post.objects.all()
+    start_item = (page-1) * max_posts_on_page
+    end_item = start_item + max_posts_on_page
+
+    posts = Post.objects.all()[start_item:end_item]
 
     return render(request, 'feed.html', {
-        'posts_list': posts
+        'posts_list': posts,
     })
 
 
